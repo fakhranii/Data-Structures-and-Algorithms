@@ -14,11 +14,17 @@
 // }
 
 
-function replicate(times, number) {
-    // Base case: if times is zero or negative, return an empty array
-    if (times <= 0) return [];
+// function replicate(times, number) {
+//     // Base case: if times is zero or negative, return an empty array
+//     if (times <= 0) return [];
+//
+//     // Recursive case: construct array with the spread operator
+//     return [number, ...replicate(times - 1, number)];
+// }
 
-    // Recursive case: construct array with the spread operator
-    return [number, ...replicate(times - 1, number)];
+
+function replicate(times, number) {
+    if (times <= 0 ) return []
+    return  [number, ...replicate(times -1 , number)]
 }
 console.log(replicate(3,5))
